@@ -12,6 +12,16 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ 
+ Expected use example:
+	//	Attach load handler to all images with document ready
+	$(document).ready(function() {
+		//	If you want to check only some images, or additional media that has a height you can modify this jquery selector to include/exclude those elements.
+		$("img").bind("load", function(){
+			//	Do something with images...
+		});
+	});
+ 
  */
 /*
 	Expanded "load" handler for all html tags.
@@ -19,7 +29,8 @@
 		* MIT License
 		* Paul Irish     | @paul_irish | www.paulirish.com
 		* Andree Hansson | @peolanha   | www.andreehansson.se
-		* 2010. https://raw.github.com/peol/jquery.imgloaded/master/ahpi.imgload.js
+		* 2010.
+		* https://raw.github.com/peol/jquery.imgloaded/master/ahpi.imgload.js
 */
 (function ($) {
 	//	For cross-browser compatibility we should handle the load event more delicately
